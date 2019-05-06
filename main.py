@@ -1,5 +1,8 @@
 import requests
 import sys
+import os
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 mode = sys.argv[1]
 if mode != "--help":
