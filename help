@@ -1,0 +1,17 @@
+leo.immobilien CLI Interface
+
+Methods:
+  -s,  --shorten          Shorten a given link.
+  -r,  --resolve          Extract a shortened link from the given address. (using the leo.immobilien API)
+  -rf, --resolve-force    Resolve a link without using the leo.immobilien API, but by sending a request and outputting the redirect destination.
+
+Optional arguments:
+  --link-only             When extracting a link, only output the destination link, not the views. (Does not make a difference when using --resolve-force)
+  --override-host         Override the leo.immobilien host.
+
+Examples:
+  -s test -> https://leo.immobilien/at/Wien/Strasse/1
+  -r https://leo.immobilien/at/Wien/Strasse/1 -> Link: http://test Views: 8
+  -r https://leo.immobilien/at/Wien/Strasse/1 --link-only -> http://test
+  -rf https://leo.immobilien/at/Wien/Strasse/1 -> http://test
+  -s test2 --override-host leo.estate -> https://leo.estate/us/Ween/Street/1
